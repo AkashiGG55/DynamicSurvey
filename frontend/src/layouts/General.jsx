@@ -5,21 +5,39 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "../pages/Home";
 import Surveys from "../pages/Surveys";
 import CreateSurvey from "../pages/CreateSurvey";
+import NotFound from "../pages/NotFound";
+import Survey from "../pages/Survey";
+import Dashboard from "../components/Dashboard";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Home />,
+        errorElement: <NotFound />
     },
     {
         path: '/surveys',
-        element: <Surveys />
+        element: <Surveys />,
+        errorElement: <NotFound />
     },
     {
         path: '/createsurvey',
-        element: <CreateSurvey />
-
+        element: <CreateSurvey />,
+        errorElement: <NotFound />
+    },
+    {
+        path: 'surveys/:surveyId',
+        element: <Survey />,
+        errorElement: <NotFound />
+    },
+    
+    {
+        path: '/dashboard',
+        element: <Dashboard />,
+        errorElement: <NotFound />
     }
+        
+    
 ])
 function GeneralLayout() {
     return(

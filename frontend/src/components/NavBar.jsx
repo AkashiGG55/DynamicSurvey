@@ -7,6 +7,8 @@ function NavBar() {
                 <a href="/surveys">Mostrar Encuestas</a>
 
                 <a href="/createsurvey">Crear Encuesta</a>
+
+                <a href="/Dashboard">Dashboard</a>
             </section>
         </nav>
     )
