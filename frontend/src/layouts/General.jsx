@@ -43,8 +43,12 @@ function GeneralLayout() {
     return(
         <div className="box-border m-0 p-0">
             <NavBar />
-            <main>
+            <main className="pt-20 min-h-screen bg-gray-50">
                 <RouterProvider router={router} />
+                
+
+
+
             </main>
             <Footer />
 
